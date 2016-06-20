@@ -1,2 +1,2 @@
-@@ECHO OFF
+@ECHO OFF
 node index.js
