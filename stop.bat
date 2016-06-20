@@ -1,6 +1,0 @@
-@ECHO OFF
-
-SET SERVICENAME=MEU_SERVICO
-SET NSSM="%CD%\nssm\nssm.exe"
-
-%NSSM% stop %SERVICENAME%

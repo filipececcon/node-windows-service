@@ -1,1 +1,3 @@
-console.log("Serviço rodando..." + Date());
+setTimeout(function(){
+  console.log("Running..." + Date());
+}, 1000)

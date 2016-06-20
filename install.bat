@@ -1,11 +1,9 @@
 @ECHO OFF
 
-SET SERVICENAME=MEU_SERVICO
+SET SERVICENAME=MY_SERVICE
+SET NSSM="%CD%\nssm\nssm.exe"
 
 ECHO INSTALLING SERVICE %SERVICENAME%
-
-SET MILISECONDS=1500
-SET NSSM="%CD%\nssm\nssm.exe"
 
 %NSSM% stop %SERVICENAME%
 %NSSM% remove %SERVICENAME% confirm
@@ -15,11 +13,11 @@ SET NSSM="%CD%\nssm\nssm.exe"
 %NSSM% set %SERVICENAME% AppDirectory %CD%
 %NSSM% set %SERVICENAME% Description "Node Windows Service test"
 %NSSM% set %SERVICENAME% Start SERVICE_AUTO_START
-%NSSM% set %SERVICENAME% AppStopMethodSkip 0
-%NSSM% set %SERVICENAME% AppStopMethodConsole %MILISECONDS%
-%NSSM% set %SERVICENAME% AppStopMethodWindow %MILISECONDS%
-%NSSM% set %SERVICENAME% AppStopMethodThreads %MILISECONDS%
-%NSSM% set %SERVICENAME% AppThrottle %MILISECONDS%
+%NSSM% set %SERVICENAME% AppStopMethodSkip 1
+%NSSM% set %SERVICENAME% AppStopMethodConsole 0
+%NSSM% set %SERVICENAME% AppStopMethodWindow 0
+%NSSM% set %SERVICENAME% AppStopMethodThreads 0
+%NSSM% set %SERVICENAME% AppThrottle 0
 %NSSM% set %SERVICENAME% AppExit Default Restart
 %NSSM% set %SERVICENAME% AppRestartDelay 0
 %NSSM% set %SERVICENAME% AppStdout %CD%\logs\%SERVICENAME%.log
@@ -30,3 +28,6 @@ SET NSSM="%CD%\nssm\nssm.exe"
 %NSSM% set %SERVICENAME% AppRotateOnline 0
 %NSSM% set %SERVICENAME% AppRotateSeconds 3600
 %NSSM% set %SERVICENAME% AppRotateBytes 524288
+%NSSM% set %SERVICENAME% AppPriority NORMAL_PRIORITY_CLASS
+%NSSM% set %SERVICENAME% AppNoConsole 0
+%NSSM% set %SERVICENAME% AppAffinity All
