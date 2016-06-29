@@ -1,4 +1,4 @@
-# node-windows-service
+# Node and Windows-Service
 Criando um windows service com NodeJs sem pacotes / Creating a windows service with node-js without packages
 
 Explicação da solução no link abaixo / Explanation of solution in the link below
