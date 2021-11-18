@@ -1,2 +1,2 @@
 # Node and Windows-Service
-See the full explanation in my blog [here](http://filipececcon.com.br/tecnologia/nodejs-criando-um-windows-service-sem-pacotes-npm/) in this link
+See the full explanation in my blog [here](https://medium.com/filipececcon/nodejs-criando-um-windows-service-sem-pacotes-npm-7d25cc68efcf) in this link
